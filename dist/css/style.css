@@ -567,7 +567,7 @@ main{
 
     .lang-btn:hover svg{
         transition: .4s;
-        transform: none;
+        transform: scale(1);
     }
 
     .langs-exp{
