@@ -68,6 +68,13 @@ function textoLang(titulo, texto) {
         alert('ERROR');
     }
 }
+const btnMenu = document.getElementById('btn-menu');
+const navBar = document.querySelector('.nav-bar');
+if (btnMenu && navBar) {
+    btnMenu.addEventListener('click', () => {
+        navBar.classList.toggle('responsive');
+    });
+}
 document.addEventListener('DOMContentLoaded', function () {
     const menu = document.querySelectorAll('.nav-bar a');
     const divs = document.querySelectorAll('main > div');

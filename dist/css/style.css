@@ -99,6 +99,10 @@ menu{
     cursor: pointer;
 }
 
+.btn-menu {
+    display: none;
+}
+
 main{
     height: auto;
     width: 100%;
@@ -111,7 +115,7 @@ main{
 
 .content{
     width: 90%;
-    height: 95vh;
+    min-height: 95vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -342,6 +346,7 @@ main{
     background-color: var(--bg-card);
     border-radius: 5px;
     overflow: hidden;
+    margin-top: 20px;
 }
 
 .projetos-card:hover{
@@ -349,20 +354,15 @@ main{
     transition: .8s ease-in;
 }
 
-.projetos-card:hover img{
-    transition: .2s;
-    transform: scale(1.05);
-}
-
 .card-image{
-    height: 170px;
+    height: 48%;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
 .card-image > img{
-    border-radius: 3px 3px 0px 0px;
+    width: 200px;
 }
 
 .card-title{
@@ -453,8 +453,203 @@ main{
     border: 2px solid var(--font3);
 }
 
+.contato-btn > a > img{
+    width: 30px;
+}
 
 
+@media screen and (max-width: 1366px){
+    .content-sobre-text-titulo > h1, 
+    .content-sobre-skill-titulo > h1,
+    .content-projeto-titulo > h1,
+    .content-contato-text > h1
+    {
+        font-size: 56px;
+    }
+
+    .content-sobre-text-conteudo > p,
+    .langs-exp > p,
+    .content-contato-text > p
+    {
+        font-size: 18px;
+    }
+
+    .projetos-card{
+        width: 210px;
+        height: 245px;
+    }
+
+    .card-image > img{
+        width: 140px;
+    }
+
+    .card-title{
+        font-size: 20px;
+    }
+
+    .card-conteudo{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1280px){
+    .content-sobre-text-titulo{
+        align-items: start;
+        justify-content: center;
+    }
+
+    .content-sobre-text-conteudo{
+        align-items: end;
+        justify-content: center;
+    }
+
+    .content-sobre-text-titulo > h1, .content-sobre-text-conteudo > p{
+        margin: 0;
+    }
+
+    .contato-btn > a > img{
+        width: 25px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .content-home-text > h1,
+    .content-sobre-text-titulo > h1, 
+    .content-sobre-skill-titulo > h1,
+    .content-projeto-titulo > h1,
+    .content-contato-text > h1
+    {
+        font-size: 40px;
+    }
+
+    .langs-title > h1{
+        font-size: 30px;
+    }
+
+    .content-home-text > h4,
+    .content-home-text > h3,
+    .content-sobre-text-conteudo > p,
+    .langs-exp > p,
+    .content-contato-text > p,
+    .langs-exp > p
+    {
+        font-size: 16px;
+    }
+    
+    .content-sobre-text-conteudo > p{
+        width: 100%;
+    }
+
+    .content#sobre{
+        height: 400vh;
+    }
+
+    .content-sobre-text-titulo{
+        align-items: end;
+        justify-content: center;
+        height: 30%;
+    }
+
+    .content-sobre-text-conteudo{
+        align-items: start;
+        justify-content: center;
+        height: 70%;
+    }
+
+    .langs-sep{
+        flex-wrap: wrap;
+    }
+
+    .lang-btn:hover{
+        transition: .4s;
+        border: 2px solid var(--font3);
+    }
+
+    .lang-btn:hover svg{
+        transition: .4s;
+        transform: scale(1.2);
+    }
+
+    .langs-exp{
+        width: 100%;
+    }
+
+    .content-projeto-titulo{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-projeto-conteudo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .content-contato{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .content-contato-img{
+        width: 100%;
+        height: 49%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-contato-text{
+        width: 100%;
+        height: 49%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-contato-text > p{
+        width: 80%;
+        text-align: center;
+    }
+    
+    .contato-btn{
+        width: 80%;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .nav-bar-btn {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .btn-menu {
+        display: block;
+    }
+
+    .nav-bar.responsive {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 5vh;
+        width: 100%;
+        background-color: var(--bg);
+    }
+
+    .nav-bar.responsive > ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .nav-bar-btn > button#btn-mode{
+        margin-left: 30px;
+    }
+}
 
 
 

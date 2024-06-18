@@ -34,7 +34,7 @@ btn_lang.forEach(button => {
     button.addEventListener('mouseover', textLangDescricao)
     button.addEventListener('mouseout', textLangClear)
     button.addEventListener('click', textLangDescricao)
-});
+})
 
 function textLangDescricao(event: MouseEvent): void {
     const target = (event.target as HTMLElement).closest('button') as HTMLButtonElement
@@ -64,6 +64,15 @@ function textoLang(titulo: string, texto: string): void{
     else{
         alert('ERROR')
     }
+}
+
+const btnMenu = document.getElementById('btn-menu') as HTMLButtonElement
+const navBar = document.querySelector('.nav-bar') as HTMLDivElement
+
+if (btnMenu && navBar) {
+    btnMenu.addEventListener('click', () => {
+        navBar.classList.toggle('responsive')
+    })
 }
 
 document.addEventListener('DOMContentLoaded', function():void {
