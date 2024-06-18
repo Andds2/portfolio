@@ -26,9 +26,22 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: var(--bg);
-    animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: var(--font3);
+    border-radius: 20px;
+    border: 3px solid var(--bg);
 }
 
 html {
@@ -66,7 +79,7 @@ menu{
 }
 
 .nav-bar > ul > li > a:hover, .nav-bar > ul > li > a.active{
-    color: var(--font1);
+    color: var(--font3);
 }
 
 .nav-bar-btn{
@@ -100,9 +113,14 @@ main{
     width: 90%;
     height: 95vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.content#sobre{
+    height: 200vh;
+    justify-content: space-evenly;
 }
 
 .content-home-text > h4{
@@ -120,7 +138,7 @@ main{
 }
 
 .content-home-text > h1{
-    font-size: 80px;
+    font-size: 70px;
     color: var(--font1);
     text-align: justify;
     font-weight: 700;
@@ -128,7 +146,7 @@ main{
 
 .content-sobre-text{
     width: 100%;
-    height: 80%;
+    height: 40%;
     display: flex;
     flex-direction: column;
 }
@@ -143,7 +161,7 @@ main{
 }
 
 .content-sobre-text-titulo > h1{
-    font-size: 80px;
+    font-size: 70px;
     color: var(--font1);
     text-align: right;
     font-weight: 700;
@@ -162,15 +180,129 @@ main{
 
 .content-sobre-text-conteudo > p{
     width: 60%;
-    font-size: 18px;
+    font-size: 20px;
     text-align: justify;
     margin: 0px 50px 50px 0px;
     color: var(--font2);
-    line-height: 27px;
+    line-height: 30px;
 }
 
 .content-sobre-text-conteudo > p > b{
     color: var(--font3);
+}
+
+.content-sobre-skill{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-sobre-skill-titulo{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.content-sobre-skill-titulo > h1{
+    font-size: 70px;
+    color: var(--font1);
+    font-weight: 700;
+}
+
+.content-sobre-skill-conteudo{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.langs{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.langs-sep{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.lang-btn{
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--bg-card);
+    background-color: var(--bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-btn svg path, .lang-btn svg g circle{
+    fill: var(--border-card);
+}
+
+.lang-btn:hover{
+    transition: .4s;
+    border-top: 2px solid var(--font3);
+}
+
+.lang-btn:hover svg{
+    transition: .4s;
+    transform: translateY(5px);
+}
+
+.lang-btn:hover svg path, .lang-btn:hover svg g circle{
+    transition: .4s;
+    fill: var(--font3);
+}
+
+.langs-txt{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.langs-title{
+    height: 50%;
+    display: flex;
+    align-items: end;
+}
+
+.langs-exp{
+    height: 50%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+}
+
+.langs-title > h1{
+    color: var(--font3);
+    font-size: 40px;
+}
+
+.langs-exp > p{
+    color: var(--font2);
+    font-size: 20px;
 }
 
 .content-projeto{
@@ -190,6 +322,7 @@ main{
 .content-projeto-titulo > h1{
     font-size: 70px;
     color: var(--font1);
+    font-weight: 700;
 }
 
 .content-projeto-conteudo{
@@ -251,11 +384,79 @@ main{
     color: var(--font3);
 }
 
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+.content-contato{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.content-contato-img{
+    width: 49%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.content-contato-img > img{
+    width: 80%;
+}
+
+.content-contato-text{
+    width: 49%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.content-contato-text > h1{
+    font-size: 70px;
+    color: var(--font1);
+    font-weight: 700;
+}
+
+.content-contato-text > p{
+    font-size: 20px;
+    color: var(--font2);
+    width: 40%;
+}
+
+.contato-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40%;
+    margin-top: 15px;
+}
+
+.contato-btn > a{
+    background-color: var(--bg-card);
+    border: 2px solid var(--border-card);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+.contato-btn > a:hover{
+    transition: .4s;
+    border: 2px solid var(--font3);
+}
+
+
+
+
+
+
+
+
