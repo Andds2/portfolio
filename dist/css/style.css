@@ -349,9 +349,18 @@ main{
     margin-top: 20px;
 }
 
+.incompleto > .card-title,
+.incompleto > .card-conteudo > b{
+    color: var(--font1);
+}
+
 .projetos-card:hover{
     border: 2px solid var(--font3);
     transition: .8s ease-in;
+}
+
+.incompleto:hover{
+    border: 2px solid var(--border-card);
 }
 
 .card-image{
@@ -382,6 +391,17 @@ main{
 
 .card-conteudo > b{
     color: var(--font3);
+}
+
+.card-link{
+    font-size: 16px;
+    color: var(--font3);
+    margin-inline: 4%;
+}
+
+.card-link:hover{
+    transition: all .6s ease-in;
+    margin-inline: 7%;
 }
 
 .content-contato{
@@ -567,7 +587,7 @@ main{
 
     .lang-btn:hover svg{
         transition: .4s;
-        transform: scale(1);
+        transform: none;
     }
 
     .langs-exp{
