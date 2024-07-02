@@ -561,23 +561,42 @@ main{
     }
 
     .content#sobre{
-        height: 400vh;
+        height: 200vh;
     }
 
     .content-sobre-text-titulo{
-        align-items: end;
+        align-items: start;
         justify-content: center;
-        height: 30%;
+        height: 10%;
     }
 
     .content-sobre-text-conteudo{
         align-items: start;
         justify-content: center;
-        height: 70%;
+        height: 90%;
+    }
+
+    .content-sobre-skill-titulo{
+        height: 10%;
+    }
+
+    .content-sobre-skill-conteudo{
+        height: 90%;
     }
 
     .langs-sep{
         flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .langs{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .lang-btn:hover{
@@ -590,8 +609,17 @@ main{
         transform: none;
     }
 
+    .langs-title{
+        height: 20%;
+        align-items: start;
+    }
     .langs-exp{
         width: 100%;
+        height: 80%;
+    }
+
+    .content#sobre{
+        justify-content: start;
     }
 
     .content-projeto-titulo{

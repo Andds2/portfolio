@@ -49,6 +49,7 @@ function textLangDescricao(event: MouseEvent): void {
     if(target.id == 'btn-py') textoLang('Python', 'Linguagem de programação de alto nível e de propósito geral, se destaca por sua sintaxe simples e sua versatilidade.')
     if(target.id == 'btn-c') textoLang('C', 'Linguagem de programação de nivel intermediário, compilada e procedural, possui propósito geral.')
     if(target.id == 'btn-csharp') textoLang('C#', 'Linguagem de programação orientada a objetos, criada para ser simples, segura e adequada para amplas aplicações.')
+    if(target.id == 'btn-nestjs') textoLang('NestJS', 'Baseado em TypeScript, o NestJS é um framework de desenvolvimento Node.js criado para facilitar a criação de APIs. Ele utiliza decorators, módulos e injeção de dependências para promover uma arquitetura modular e escalável')
 }
 
 function textLangClear(): void{
