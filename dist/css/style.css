@@ -254,24 +254,27 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .4s;
+}
+
+.lang-btn svg{
+    transition: .4s;
 }
 
 .lang-btn svg path, .lang-btn svg g circle{
+    transition: .4s;
     fill: var(--border-card);
 }
 
 .lang-btn:hover{
-    transition: .4s;
     border-top: 2px solid var(--font3);
 }
 
 .lang-btn:hover svg{
-    transition: .4s;
     transform: translateY(5px);
 }
 
 .lang-btn:hover svg path, .lang-btn:hover svg g circle{
-    transition: .4s;
     fill: var(--font3);
 }
 
@@ -347,6 +350,7 @@ main{
     border-radius: 5px;
     overflow: hidden;
     margin-top: 20px;
+    transition: .8s ease-in;
 }
 
 .incompleto > .card-title,
@@ -356,7 +360,6 @@ main{
 
 .projetos-card:hover{
     border: 2px solid var(--font3);
-    transition: .8s ease-in;
 }
 
 .incompleto:hover{
@@ -397,10 +400,10 @@ main{
     font-size: 16px;
     color: var(--font3);
     margin-inline: 4%;
+    transition: all .6s ease-in;
 }
 
 .card-link:hover{
-    transition: all .6s ease-in;
     margin-inline: 7%;
 }
 
